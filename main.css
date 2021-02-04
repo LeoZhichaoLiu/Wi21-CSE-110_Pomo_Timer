@@ -1,0 +1,106 @@
+#introduction{
+    text-align:center;
+    color: hsl(239, 48%, 42%);
+}
+
+body {
+    background:rgb(164, 240, 243);
+}
+
+#top_button{
+    margin-left: 39%;
+}
+#top_button button{
+    color:white; 
+    border : none;
+    cursor:pointer; 
+    padding:5px; 
+    margin:5px 5px auto;
+    width:80px; 
+    height : 40px;
+    font-size:15px;
+    font-family: times;
+    border-radius : 30px;
+    background : rgb(186, 5, 192);
+}
+
+#container{
+    border:5px solid rgb(37, 7, 85);
+    border-radius :30px;
+    width:500px;
+    height:480px;
+    margin:10px auto;
+    padding:30px;
+    text-align:center;
+    background :#333;
+}
+  
+#clock{ 
+    color:red; 
+    border : 5px dotted white;
+    font-size:50px; 
+    margin:10px auto;
+    border-radius:50%;
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    position:relative;
+}
+  
+#time{
+    margin-top:70px;
+    z-index : 1;
+    position:relative;
+}
+  
+#buttons button{ 
+    color:white; 
+    border : 1px solid rgb(207, 204, 33);
+    cursor:pointer; 
+    padding:5px; 
+    margin:12px 3px auto;
+    width:100px; 
+    height : 50px;
+    font-size:15px;
+    font-family: times;
+    border-radius : 30px;
+}
+
+#buttons button#start{
+    background : rgb(3, 124, 9);
+}
+  
+#buttons button#shortBreak{
+    background : rgb(170, 168, 43);
+}
+  
+#buttons button#longBreak{
+    background : rgb(71, 82, 12);
+}
+  
+#buttons button#stop{
+    background : #e61515;
+}
+
+#selector{  
+    background:rgb(59, 179, 209);
+    border : 1px solid rgb(207, 204, 33);
+    padding:6px; 
+    margin:24px auto;
+    width:300px; 
+    height : 70px;
+    border-radius : 100px;
+}
+
+#task{
+    background : rgb(226, 235, 184);
+    color : #432291;
+    margin:10px auto;
+    width: 168px; 
+    height : 20px;
+    font-family: times;
+    cursor:pointer; 
+}
+
+
+  
