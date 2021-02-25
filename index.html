@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PomoTracker</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id=container>
+            <div class=navbar>
+                <span id=logo>PomoTracker.</span>
+                <div class=navbottons>
+                    <a class=navbotton style="color: #D54546;" href="#home">Home</a>
+                    <a class=navbotton href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a id=analyze href="#analyze" class=buttons>Analyze</a>
+                </div>
+            </div>
+            <div class=main-container>
+                <div id="timer">
+                    <div id="time">25 : 00</div>
+                    <div id="filler"></div>
+                </div>
+
+                <form id="form_info">
+                    <div class=subinfo>
+                        <span class=subinfo_name>Type</span><br>
+                        <div id=inputtypes>
+                            <input type="radio" id="type1" name="type" value="study" checked>
+                            <label id="label1" for="type1">Study</label>
+                            <input type="radio" id="type2" name="type" value="work">
+                            <label for="type2">Work</label>
+                            <input type="radio" id="type3" name="type" value="think">
+                            <label for="type3">Think</label>
+                            <input type="radio" id="type4" name="type" value="read">
+                            <label for="type4">Read</label>
+                            <input type="radio" id="type5" name="type" value="cutsom">
+                            <label for="type5">Custom</label>
+                        </div>
+                    </div>
+                    <div class=subinfo id=inputnotes>
+                        <span class=subinfo_name>Notes</span><br>
+                        <input type="text" class="inputbar" id="notes" name="notes" value="Typing...">
+                    </div>
+                    <div class=subinfo id=inputnum>
+                        <span class=subinfo_name># of Pomos</span><br>
+                        <div id=pomonum>
+                            <input class=tomatoradio type="radio" id="1pomo" name="num" value="1" checked>
+                            <label class=tomato id="num1" for="1pomo">🍅</label>
+                            <input class=tomatoradio type="radio" id="2pomo" name="num" value="2">
+                            <label class=tomato id="num2" for="2pomo">🍅</label>
+                            <input class=tomatoradio type="radio" id="3pomo" name="num" value="3">
+                            <label class=tomato id="num3" for="3pomo">🍅</label>
+                            <input class=tomatoradio type="radio" id="4pomo" name="num" value="4">
+                            <label class=tomato id="num4" for="4pomo">🍅</label>
+                        </div>
+                        <div class = enter_num id = "enter_num">
+                            <span class=subinfo_name id="or">Or</span>
+                            <input type="number" min="5" max="20" step="1" class="inputbar" value="" id="num_text" name="num">
+                        </div>
+                    </div>
+                </form>
+
+                <div id = "rate">
+                    <div id="number">0 / 1</div>
+                    <div id="progress"></div>
+                </div>
+                </div>
+                <p id=Quote>
+                    <span style="font-size: 18px;color:white;">Inspiration quote,
+                    This would be a inspiration quote, </br>
+                     randomly selected from data base.
+                    </span>
+                </p>
+                <input type="button" value="Start" id="skip" class=buttons disabled/>
+            </div>
+            <div id="music">
+                <audio
+                   controls
+                      src="./Refrain.mp3">
+                      Your browser does not support the <code>audio</code> element.
+               </audio>
+             </div>
+        </div>
+        <script src="main.js"></script>
+    </body>  
+</html>
