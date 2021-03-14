@@ -29,6 +29,85 @@ html{
     line-height: 36px;
 }
 
+#setting_page {
+    display: none;
+    position: absolute;
+    background: linear-gradient(180deg, #FF8A8B 0%, #FFBFAC 100%);
+    border: 1px solid black;
+    border-radius: 45px;
+    height: 300px;
+    width: 250px;
+    left: 75%;
+    top: 18%;
+    font-size : 16px; 
+    font-family: times;
+}
+#pomo_range_id {
+    position: absolute;
+    left: 10%;
+    top: 11%;
+}
+
+#pomo_range {
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    left: 70%;
+    top: 8%;
+}
+
+#longBreak_range_id {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+
+#long_break_range {
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    left: 70%;
+    top: 28%; 
+}
+
+#shortBreak_range_id {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+}
+
+#short_break_range {
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    left: 70%;
+    top: 48%; 
+}
+
+#language_id {
+    position: absolute;
+    left: 10%;
+    top: 67%;
+}
+
+#language {
+    position: absolute;
+    left: 62%;
+    top: 67%; 
+}
+
+#confirm_change {
+    position: absolute;
+    text-align: center;
+    color: white;
+    background: linear-gradient(274.65deg, #D54546 1.05%, rgba(213, 69, 70, 0) 127.07%);
+    width: 96px;
+    height: 35px;
+    left: 32%;
+    top: 82%; 
+}
+
+
 #logo{
     font-size: 30px;
     color: #D54546;
@@ -58,6 +137,12 @@ a{
     border-radius: 15px;
 }
 
+#setting{
+    font-size: 16px;
+    color: gray;
+    background: radial-gradient(301.17% 150.36% at 50.04% -31.22%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 #music{
     position: absolute;
     top:8.5%;
@@ -80,13 +165,13 @@ a{
     line-height: 371px;
     border: solid 27px;
     border-radius: 50%;
-    border-color: #D54546;
+    border-color: rgba(240, 240, 240, 0.25);
+    background-color: rgba(255,255,255, 0.2);
     font-variant-numeric: tabular-nums;
 }
 
 #number{
     text-align: center;
-    z-index : 1;
     font-size: 15px;
     font-style: times;
     color: #FFFFFF;
@@ -94,7 +179,7 @@ a{
 
 #timer{
     position: absolute;
-    top: 40%;
+    top: 37%;
     left: 50%;
     overflow:hidden;
     border-radius:50%;
@@ -103,14 +188,14 @@ a{
     transform: translate(-50%, -50%);
 }
 
-#rate{ 
-    color:#f00; 
+#rate{
+    font-family: 'Roboto', sans-serif;
     top:69%;
     left: 32%;
     font-size:50px; 
     margin:10px auto;
     border : 5px solid white; 
-    border-radius:25%;
+    border-radius:50px;
     width:400px;
     height:20px;
     overflow:hidden;
@@ -119,7 +204,8 @@ a{
 }
 
 #progress {
-    background : red;
+    z-index: -1;
+    background : #D54546;
     height: 20px;
     width: 0px;
     position:absolute;
@@ -127,7 +213,7 @@ a{
 }
 
 #filler{
-    background : #ddffcc;
+    background : #47a840;
     height: 0px;
     width: 425px;
     position:absolute;
@@ -140,13 +226,13 @@ a{
     width: 170px;
     height: 50px;
     left: 42%;
-    top: 730px;
-    font-family: times;
+    top: 90%;
     font-size : 30px;
     display:block;
 }
 
-#Quote{
+#quote{
+    font-family: Poppins;
     position: absolute;
     width: 500px;
     height: 60px;
@@ -156,32 +242,37 @@ a{
     display:none;
 }
 
-#quick{
+#form_info{
     position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: inset 0px 4px 4px #D54546;
-    padding: 10px 50px;
-    font-size: 20px;
+    top: 62%;
+    left:20%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
 }
 
-#pic{
-    margin-left: -1100px;
-    margin-top: 340px;
-    position: absolute; z-index: 1;
-    zoom: 33%;
+.subinfo_name{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.subinfo{
+    margin-top: 15px;
 }
 
 .buttons{
-    background: linear-gradient(274.65deg, #D54546 1.05%, rgba(213, 69, 70, 0) 127.07%);
+    background: #FFFFFF;
     border: none;
     text-align: center;
     text-decoration: none;
     border-radius: 15px;
     font-family: Poppins;
     font-style: normal;
-    color: #FFFFFF;
+    color: #D54546;
     outline: none;
     cursor: pointer;
 }
@@ -199,63 +290,14 @@ a{
     outline: none;
 }
 
-.subinfo_name{
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 42px;
-    color: #000000;
-}
-
-.subinfo{
-    margin-top: 50px;
-}
-
-#form_info{
-    display:block;
-    position:absolute;
-    top:60%;
-    left:20%;
-}
-
 #inputtypes{
-    display:flex;
+    display: flex;
     justify-content: space-between;
     background: #FFFFFF;
     border-radius: 50px;
     border:#FFFFFF;
     width: 310px;
     outline: none;  
-    position:absolute;
-}
-
-#inputnotes{
-    display:flex;
-    position:absolute;
-    top:0%;
-    left:120%;
-}
-
-#notes{
-    display:flex;
-    position:absolute;
-    top:100%;
-    left:0%;
-}
-
-#num_text{
-    position: absolute;
-    width: 80px;
-    top: 83%;
-    left: 122%;
-}
-
-#or{
-    position: absolute;
-    color:white;
-    top: 82%;
-    left: 108%;
 }
 
 input[type="text"], input[type="number"]{
@@ -284,6 +326,11 @@ input[type=radio] {
     display: none;
 }
 
+input[type=checkbox] {
+    visibility: hidden;
+    display: none;
+}
+
 input[type=radio]:checked + label{
     background-color: #D54546;
     border-radius: 50px;
@@ -297,13 +344,14 @@ input[type=range] {
     background:black;
 }
 
+
 #pomonum{
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     background: #FFFFFF;
     border-radius: 50px;
     border:#FFFFFF;
-    width: 310px;
+    width: 180px;
     height: 37px;
     outline: none;
     padding: 0px 0px;
@@ -314,14 +362,108 @@ input[type=range] {
 }
 
 .tomato{
-    font-size: 28px;
-    margin-left: 0px;
-    padding: 0px 20px;
+    font-size: 27px;
+    padding: 0px 5px;
     line-height: 37px;
 }
 
 .tomatoradio:checked + .tomato {
     background-color: #D54546;
     border-radius: 50px;
-    padding: 0px 20px;
+    padding: 0px 5px;
 }
+
+#num_text{
+    width: 30px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#or{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#numCus {
+    background-color: white;
+    box-shadow: inset 0 0 0px 2px #D54546;
+    margin-left: 0;
+    border-radius: 50px 0px 0px 50px;
+    padding: 0px 5px;
+}
+
+#enter_num {
+    display: inline-flex;
+}
+
+#cong {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 90px;
+    font-weight: 600;
+    color:#D54546;
+}
+
+#goal_finish {
+    display: none;
+}
+
+#prompt {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+}
+
+#return {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 70%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 400px;
+    height: 50px;
+    font-size : 30px;
+    display:block;
+}
+
+
+#play-pause-button{
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+
+/* #finish {
+    position: absolute;
+    text-align: center;
+    width: 170px;
+    height: 50px;
+    left: 53%;
+    top: 81%;
+    font-size : 30px;
+    display:block;
+} */

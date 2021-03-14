@@ -7,20 +7,47 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     </head>
 
     <body>
+
+
+        <div class="audioplay-object">
+            <div class="audioplay-button"></div>
+            <audio class="audioplay-player">
+              <source src="https://mp3.itingwa.com/2014-05/05/20140505085310-NjE5NTYz.mp3" style="top: 20%; left: 80%;">
+              Your browser doesn't support &lt;audio&gt; element.
+            </audio>
+        </div>
+        <script src="https://strangecube.com/audioplay2/player/js/audioplay-2.0.0.min.js"></script>
+
+
         <div id=container>
             <div class=navbar>
                 <span id=logo>PomoTracker.</span>
                 <div class=navbottons>
-                    <a class=navbotton style="color: #D54546;" href="#home">Home</a>
-                    <a class=navbotton href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <a class=navbotton id=home style="color: #D54546;" href="#home">Home</a>
+                    <a class=navbotton id=about href="#about">About</a>
+                    <a href="#setting" id=setting class=buttons>Setting</a>
                     <a id=analyze href="#analyze" class=buttons>Analyze</a>
                 </div>
             </div>
-            <div class=main-container>
+            <div class=setting_page id=setting_page>
+                <span id="pomo_range_id"> Pomo Range </span>
+                <input type="number" min="15" max="40" step="1" value="25" id="pomo_range">
+                <span id="longBreak_range_id"> Long Break Range </span>
+                <input type="number" min="10" max="20" step="1" value="15" id="long_break_range">
+                <span id="shortBreak_range_id"> Short Break Range </span>
+                <input type="number" min="1" max="10" step="1" value="5" id="short_break_range">
+                <span id="language_id"> Language </span>
+                <select name="language" id="language">
+                    <option value="English" id="English">English</option>
+                    <option value="Chinese" id="Chinese">Chinese</option>
+                </select> 
+                <a id=confirm_change class=buttons>Confirm</a>
+            </div>
+            <div>
                 <div id="timer">
                     <div id="time">25 : 00</div>
                     <div id="filler"></div>
@@ -28,26 +55,26 @@
 
                 <form id="form_info">
                     <div class=subinfo>
-                        <span class=subinfo_name>Type</span><br>
+                        <span class=subinfo_name id=task_type>Task Type</span><br>
                         <div id=inputtypes>
                             <input type="radio" id="type1" name="type" value="study" checked>
                             <label id="label1" for="type1">Study</label>
                             <input type="radio" id="type2" name="type" value="work">
-                            <label for="type2">Work</label>
+                            <label id="label2" for="type2">Work</label>
                             <input type="radio" id="type3" name="type" value="think">
-                            <label for="type3">Think</label>
+                            <label id="label3" for="type3">Think</label>
                             <input type="radio" id="type4" name="type" value="read">
-                            <label for="type4">Read</label>
+                            <label id="label4" for="type4">Read</label>
                             <input type="radio" id="type5" name="type" value="cutsom">
-                            <label for="type5">Custom</label>
+                            <label id="label5" for="type5">Play</label>
                         </div>
                     </div>
                     <div class=subinfo id=inputnotes>
-                        <span class=subinfo_name>Notes</span><br>
+                        <span class=subinfo_name id="note_id">Notes</span><br>
                         <input type="text" class="inputbar" id="notes" name="notes" value="Typing...">
                     </div>
                     <div class=subinfo id=inputnum>
-                        <span class=subinfo_name># of Pomos</span><br>
+                        <span class=subinfo_name id='Pomos_id'># of Pomos</span><br>
                         <div id=pomonum>
                             <input class=tomatoradio type="radio" id="1pomo" name="num" value="1" checked>
                             <label class=tomato id="num1" for="1pomo">🍅</label>
@@ -58,10 +85,14 @@
                             <input class=tomatoradio type="radio" id="4pomo" name="num" value="4">
                             <label class=tomato id="num4" for="4pomo">🍅</label>
                         </div>
-                        <div class = enter_num id = "enter_num">
-                            <span class=subinfo_name id="or">Or</span>
-                            <input type="number" min="5" max="20" step="1" class="inputbar" value="" id="num_text" name="num">
-                        </div>
+                        <span>
+                            <span id="or"> Or </span>
+                            <span id=enter_num>
+                                <input class=tomatoradio type="radio" id="numpomo" name="num">
+                                <label class=tomato id="numCus" for="numpomo">✏️</label>
+                                <input type="number" min="5" max="60" step="1" class="inputbar" value="5" id="num_text">
+                            </span>
+                        </span>
                     </div>
                 </form>
 
@@ -70,22 +101,21 @@
                     <div id="progress"></div>
                 </div>
                 </div>
-                <p id=Quote>
-                    <span style="font-size: 18px;color:white;">Inspiration quote,
-                    This would be a inspiration quote, </br>
-                     randomly selected from data base.
-                    </span>
+                <p id=quote>
+                    <span id = "quotes" style="font-size: 18px;color:white;">Lost time is never found again. – Benjamin Franklin</span>
                 </p>
                 <input type="button" value="Start" id="skip" class=buttons disabled/>
             </div>
-            <div id="music">
-                <audio
-                   controls
-                      src="./Refrain.mp3">
-                      Your browser does not support the <code>audio</code> element.
-               </audio>
-             </div>
+
+        <div id=goal_finish>
+            <span id=cong>Congrats!</span>
+            <span id=prompt>You have finished your pomo goal!
+                <br> You can now <span style="color:#D54546">return to mainpage</span> to start a new task or <span style="color:#D54546">leave the website</span>.</span>
+            <div id = prompt_buttons>
+                <input type="button" value="Return to Mainpage" id="return" class=buttons>
+            </div>
         </div>
         <script src="main.js"></script>
+        <script src="tomatotes.js"></script>
     </body>  
 </html>
