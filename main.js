@@ -185,6 +185,8 @@ function setting_change () {
 
     if ((document.getElementById('language').value) == 'English') {
         document.getElementById('logo').innerHTML = 'PomoTracker';
+        document.getElementById('home').innerHTML = 'Home';
+        document.getElementById('about').innerHTML = 'About';
         document.getElementById('setting').innerHTML = 'Setting';
         document.getElementById('analyze').innerHTML = 'Analyze';
         document.getElementById('pomo_range_id').innerHTML = 'Pomo Range';
@@ -203,6 +205,7 @@ function setting_change () {
         document.getElementById('note_id').innerHTML = 'Notes';
         document.getElementById('notes').value = 'Typing...';
         document.getElementById('Pomos_id').innerHTML = '# of Pomos';
+        document.getElementById('or').innerHTML = 'Or';
         document.getElementById('skip').value = 'Start';
         document.getElementById('cong').innerHTML = 'Congrats';
         document.getElementById('prompt').innerHTML = 'You have finished your pomo goal! <br> You can now <span style="color:#D54546">return to mainpage</span> to start a new task or <span style="color:#D54546">leave the website</span>.'
@@ -232,6 +235,7 @@ function setting_change () {
         document.getElementById('note_id').innerHTML = '补充';
         document.getElementById('notes').value = '输入...';
         document.getElementById('Pomos_id').innerHTML = '循环次数';
+        document.getElementById('or').innerHTML = '或';
         document.getElementById('skip').value = '开始';
         document.getElementById('cong').innerHTML = '恭喜';
         document.getElementById('prompt').innerHTML = '你已经完成了所有循环! <br> 你现在可以 <span style="color:#D54546">回到主页面</span> 去创建新的任务，或 <span style="color:#D54546">离开页面</span>.';
